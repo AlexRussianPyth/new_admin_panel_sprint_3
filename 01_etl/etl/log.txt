@@ -1,0 +1,992 @@
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "HEAD / HTTP/1.1" 200 0
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:200 duration:0.165s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "DELETE /movies HTTP/1.1" 200 21
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:200 duration:0.066s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "HEAD /movies HTTP/1.1" 404 0
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/movies [status:404 duration:0.006s]
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies [status:N/A duration:10.009s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:N/A duration:10.008s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "HEAD / HTTP/1.1" 200 0
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:200 duration:0.009s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "DELETE /movies HTTP/1.1" 200 21
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:200 duration:0.048s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "HEAD /movies HTTP/1.1" 404 0
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/movies [status:404 duration:0.004s]
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies [status:N/A duration:10.012s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:N/A duration:10.008s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "HEAD / HTTP/1.1" 200 0
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:200 duration:0.008s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "DELETE /movies HTTP/1.1" 200 21
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:200 duration:0.051s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "HEAD /movies HTTP/1.1" 404 0
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/movies [status:404 duration:0.003s]
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies [status:N/A duration:10.012s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:N/A duration:10.012s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "HEAD / HTTP/1.1" 200 0
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:200 duration:0.206s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "DELETE /movies HTTP/1.1" 200 21
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:200 duration:0.053s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "HEAD /movies HTTP/1.1" 404 0
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/movies [status:404 duration:0.008s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies HTTP/1.1" 200 65
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies [status:200 duration:0.138s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 15947
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.288s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 4016
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.036s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16037
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.111s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 14436
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.105s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.104s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16037
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.111s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16037
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.114s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16037
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.144s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.084s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.068s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.073s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.070s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.062s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16088
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.073s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.067s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.062s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 7875
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.024s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.055s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 4056
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.033s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.040s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 4055
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.013s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.031s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 4056
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.015s]
+DEBUG:urllib3.connectionpool:Resetting dropped connection: 127.0.0.1
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.003s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Подключение к ES создано
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "HEAD / HTTP/1.1" 200 0
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:200 duration:0.096s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "DELETE /movies HTTP/1.1" 200 21
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:200 duration:0.056s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "HEAD /movies HTTP/1.1" 404 0
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/movies [status:404 duration:0.005s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies HTTP/1.1" 200 65
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies [status:200 duration:0.132s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 15947
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.220s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 4016
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.035s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.093s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 14436
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.073s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.093s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.090s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.081s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16037
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.138s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.085s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.050s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.046s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.083s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.074s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16088
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.092s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.052s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.036s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 7875
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.018s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.051s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 4055
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.015s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.042s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 4055
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.012s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.073s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 4056
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.023s]
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.003s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Подключение к ES создано
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.004s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Подключение к ES создано
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.003s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Подключение к ES создано
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Подключение к ES создано
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.003s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Подключение к ES создано
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.003s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Подключение к ES создано
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.003s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Подключение к ES создано
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.003s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Подключение к ES создано
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Подключение к ES создано
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.003s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.003s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.003s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Подключение к ES создано
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 1 times in a row, putting on 1 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 2 times in a row, putting on 2 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.002s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 3 times in a row, putting on 4 second timeout
+WARNING:elastic_transport.transport:Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_transport.py", line 329, in perform_request
+    meta, raw_data = node.perform_request(
+  File "/home/alex/python/new_admin_panel_sprint_3/01_etl/venv/lib/python3.10/site-packages/elastic_transport/_node/_http_urllib3.py", line 199, in perform_request
+    raise err from None
+elastic_transport.ConnectionError: Connection error caused by: ProtocolError(('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9200
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:N/A duration:0.001s]
+WARNING:elastic_transport.node_pool:Node <Urllib3HttpNode(http://127.0.0.1:9200)> has failed for 4 times in a row, putting on 8 second timeout
+DEBUG:root:Попытка подключения к ES
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9200
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "HEAD / HTTP/1.1" 200 0
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/ [status:200 duration:0.268s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "DELETE /movies HTTP/1.1" 200 21
+INFO:elastic_transport.transport:DELETE http://127.0.0.1:9200/movies [status:200 duration:0.087s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "HEAD /movies HTTP/1.1" 404 0
+INFO:elastic_transport.transport:HEAD http://127.0.0.1:9200/movies [status:404 duration:0.006s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies HTTP/1.1" 200 65
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies [status:200 duration:0.135s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 15947
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.289s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 4016
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.031s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16037
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.142s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 14437
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.161s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.097s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.102s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.105s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.105s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.082s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.078s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.083s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.094s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16036
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.080s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16088
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.058s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.045s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.058s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 7875
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.040s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.050s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 4056
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.031s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.055s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 4055
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.014s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.056s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 4056
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.017s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 16116
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.028s]
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9200 "PUT /movies/_bulk HTTP/1.1" 200 4056
+INFO:elastic_transport.transport:PUT http://127.0.0.1:9200/movies/_bulk [status:200 duration:0.016s]

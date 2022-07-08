@@ -1,16 +1,19 @@
 import os
 import pathlib
+from pydantic import BaseSettings, Field
 
 import dotenv
 
 dotenv.load_dotenv(os.path.join(pathlib.Path(__file__).parent.parent.absolute(), '.env'))
 
-DB_SCHEMA = os.environ.get('DB_SCHEMA')
-SQLITE_DB = os.environ.get('SQLITE_DB_NAME')
-POSTGRE_SETTINGS = {
-    'database': 'movies_database',
-    'user': 'app',
-    'password': '123qwe',
-    'host': '0.0.0.0',
-    'port': '5432',
-}
+
+class PostgreSettings(BaseSettings):
+    database: str = Field(..., env='POSTGRES_DB')
+    user: str = Field(..., env='POSTGRES_USER')
+    password: str = Field(..., env='POSTGRES_PASSWORD')
+    host: str = Field(..., env='DB_HOST')
+    port: str = Field(..., env='DB_PORT')
+
+    class Config:
+        env_file = '../.env'
+        env_file_encoding = 'utf-8'

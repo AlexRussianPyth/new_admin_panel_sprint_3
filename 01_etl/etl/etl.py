@@ -3,7 +3,7 @@ import time
 
 import psycopg2
 from backoff import backoff
-from db_settings import POSTGRE_SETTINGS
+from db_settings import PostgreSettings
 from elasticsearch import Elasticsearch, helpers
 from esloader import ESLoader
 from extractor import Extractor
@@ -37,7 +37,7 @@ def create_es_connection(socket):
 
 if __name__ == '__main__':
 
-    with create_pg_conn(POSTGRE_SETTINGS) as pg_conn:
+    with create_pg_conn(PostgreSettings().dict()) as pg_conn:
         # Запускаем класс, управляющий записями о состояниях
         json_storage = JsonFileStorage('states.json')
         json_storage.create_json_storage()
@@ -69,4 +69,5 @@ if __name__ == '__main__':
             validated_data = transformer.transform_record(data)
 
             loader.bulk_upload(data=validated_data, index='movies', chunk_size=80)
+            time.sleep(5)
 
