@@ -1,10 +1,10 @@
-from typing import Iterator, List
 import logging
+from typing import Iterator, List
 
-from elasticsearch import helpers, Elasticsearch
-from es_index import es_index_schema
+from elasticsearch import Elasticsearch, TransportError, helpers
 
 from backoff import backoff
+from es_index import es_index_schema
 
 
 class ESLoader:

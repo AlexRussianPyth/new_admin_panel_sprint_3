@@ -3,8 +3,8 @@ from typing import List
 
 from psycopg2.extensions import connection as _connection
 
-from utils import ornate_ids
 from backoff import backoff
+from utils import ornate_ids
 
 
 class Extractor:
@@ -66,16 +66,13 @@ class Extractor:
         if len(query_result) == 0:
             return []
 
-        # Изменяем дату состояния так, чтобы она соответствовала самой большому значению 'modified' из пачки
+        # Изменяем дату состояния так, чтобы она соответствовала самому большому значению 'modified' из пачки
         self.state_manager.set_state(key=f'last_{table}_check', value=str(query_result[-1][1]))
-
-        # Получаем строку с id, находящимися в нашем курсоре
-        ids = ','.join(curs.mogrify('%s', (item['id'],)).decode() for item in query_result)
 
         # возвращаем пачку DictRows
         return query_result
 
-    backoff()
+    @backoff()
     def find_person_film_connection(self, modified_persons):
 
         person_ids = [obj['id'] for obj in modified_persons]

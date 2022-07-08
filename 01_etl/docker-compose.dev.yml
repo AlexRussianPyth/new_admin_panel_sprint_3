@@ -53,10 +53,13 @@ services:
     depends_on:
       - db
 
-#  etl:
-#    container_name: etl-container
-#    build: ./etl
-#    depends_on:
-#      - elasticsearch
+  etl:
+    container_name: etl-container
+    build: ./etl
+    env_file:
+      - ./.env
+    depends_on:
+      - elasticsearch
+      - db
 
 

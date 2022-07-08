@@ -2,16 +2,17 @@ import logging
 import time
 
 import psycopg2
+from psycopg2.extensions import connection as _connection
+from psycopg2.extras import DictCursor
+
 from backoff import backoff
 from esloader import ESLoader
 from extractor import Extractor
-from psycopg2.extensions import connection as _connection
-from psycopg2.extras import DictCursor
 from settings import EsSettings, PostgreSettings
 from state import JsonFileStorage, State
 from transformer import Transformer
 
-logging.basicConfig(filename="log.txt", level=logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG)
 
 WAIT_SEC = 2
 
@@ -20,6 +21,7 @@ WAIT_SEC = 2
 def create_pg_conn(settings: dict) -> _connection:
     """Создает подключение к Postgre"""
     return psycopg2.connect(**settings, cursor_factory=DictCursor)
+
 
 if __name__ == '__main__':
     with create_pg_conn(PostgreSettings().dict()) as pg_conn:
