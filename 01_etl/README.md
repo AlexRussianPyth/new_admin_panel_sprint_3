@@ -24,25 +24,29 @@
     $ docker exec -it web-container bash
     $ python3 manage.py collectstatic
 ```
-
-7. Опционально: Запустите ETL систему "Postgre -> ElasticSearch". Для этого используется файл
-"docker-compose.dev.yml"
-```
-    $ docker-compose -f docker-compose.dev.yml up --build
-    $ python3 etl/etl.py
-```
-8. Опционально: Перелейте данные о фильмах из Sqlite3 в Postgre. 
+7. Опционально: Перелейте данные о фильмах из Sqlite3 в Postgre. 
 Для этого вам потребуется файл "docker-compose.dev.yml"
 ```
     $ docker-compose -f docker-compose.dev.yml up --build
 ```
 Далее используйте скрипт load_data.py из модуля db_loader. Нам понадобится создать виртуальное 
-окружение перед использованием загрузчика. Создадим его в папке 'service': 
+окружение перед использованием загрузчика: 
 ```
     $ python3 -m venv venv
     $ source venv/bin/activate
     $ pip install -r service/requirements.txt
+```
+Затем на время поменяем значение переменной DB_HOST с 'db' на 0.0.0.0 (так как наш скрипт
+не работает с DNS Докера).
+```
     $ python3 db_loader/load_data.py
 ```
-curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_cluster/settings -d '{ "transient": { "cluster.routing.allocation.disk.threshold_enabled": false } }'
-curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
+Возвратите переменную обратно к значению 'db'.
+
+Установка проекта завершена!
+
+
+Проект полностью контейнеризован, поэтому для его запуска всегда достаточно набрать
+```
+    $ docker-compose up
+```
