@@ -1,14 +1,25 @@
 from typing import Iterator, List
+import logging
 
-from elasticsearch import helpers
+from elasticsearch import helpers, Elasticsearch
 from es_index import es_index_schema
+
+from backoff import backoff
 
 
 class ESLoader:
     """Загружает данные в Elastic Search"""
-    def __init__(self, es_connection):
-        self._es = es_connection
+    def __init__(self, address):
+        self.address = address
+        self._es = self.connect(address)
 
+    @backoff()
+    def connect(self, address) -> Elasticsearch:
+        """Вернуть текущее подключение для ES или инициализировать новое"""
+        logging.debug("Попытка подключения к ES")
+        return Elasticsearch(address)
+
+    @backoff()
     def create_index(self, index_name='movies'):
         created = False
         index_settings = es_index_schema
@@ -18,12 +29,13 @@ class ESLoader:
                 # 400 ошибка это IndexAlreadyExists
                 self._es.indices.create(index=index_name, ignore=400, body=index_settings)
             created = True
-        except Exception as ex:
-            logging.debug("Ошибка в создании индекса")
-            logging.debug(str(ex))
+        except TransportError as ex:
+            logging.warning("Ошибка в создании индекса")
+            logging.warning(str(ex))
         finally:
             return created
 
+    @backoff()
     def bulk_upload(self, data: List, index: str, chunk_size: int) -> None:
         """Загрузит данные из итератора в ES"""
 
@@ -41,5 +53,6 @@ class ESLoader:
             chunk_size=chunk_size
         )
 
+    @backoff()
     def delete_index(self, index_name):
         self._es.options(ignore_status=[400, 404]).indices.delete(index=index_name)

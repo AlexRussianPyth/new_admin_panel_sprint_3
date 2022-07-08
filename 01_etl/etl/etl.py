@@ -3,7 +3,6 @@ import time
 
 import psycopg2
 from backoff import backoff
-from elasticsearch import Elasticsearch, helpers
 from esloader import ESLoader
 from extractor import Extractor
 from psycopg2.extensions import connection as _connection
@@ -22,21 +21,7 @@ def create_pg_conn(settings: dict) -> _connection:
     """Создает подключение к Postgre"""
     return psycopg2.connect(**settings, cursor_factory=DictCursor)
 
-
-@backoff()
-def create_es_connection(address):
-    """Создаст подключение к ES"""
-    connection = Elasticsearch(address)
-    logging.debug("Попытка подключения к ES")
-    if not connection.ping() or connection is None:
-        connection = Elasticsearch(address)
-        logging.debug("Подключение к ES создано")
-        return connection
-    return connection
-
-
 if __name__ == '__main__':
-
     with create_pg_conn(PostgreSettings().dict()) as pg_conn:
         # Запускаем класс, управляющий записями о состояниях
         json_storage = JsonFileStorage('states.json')
@@ -51,13 +36,12 @@ if __name__ == '__main__':
 
         # Подключимся к нашему Elastic Search серверу
         es_settings = EsSettings()
-        es_conn = create_es_connection(es_settings.get_full_address())
+        address = es_settings.get_full_address()
 
         # Инициализируем класс, который управляет загрузкой данных в ElasticSearch
-        loader = ESLoader(es_conn)
+        loader = ESLoader(address=address)
 
         # Проверяем наличие индекса и создаем его, если индекс отсутствует
-        print(es_conn)
         loader.delete_index('movies')
         loader.create_index('movies')
 

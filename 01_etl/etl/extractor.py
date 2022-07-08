@@ -1,9 +1,10 @@
 import logging
 from typing import List
 
-from backoff import backoff
 from psycopg2.extensions import connection as _connection
+
 from utils import ornate_ids
+from backoff import backoff
 
 
 class Extractor:
@@ -13,6 +14,7 @@ class Extractor:
         self.connection = connection
         self.state_manager = state_manager
 
+    @backoff()
     def execute_query(self, query: str):
         curs = self.connection.cursor()
         curs.execute(query)
@@ -45,6 +47,7 @@ class Extractor:
         full_data = self.enrich_modified_films(films)
         return full_data
 
+    @backoff()
     def get_modified(self, table: str, date: str, batch_size: int) -> List[List]:
 
         query = f'''
@@ -72,6 +75,7 @@ class Extractor:
         # возвращаем пачку DictRows
         return query_result
 
+    backoff()
     def find_person_film_connection(self, modified_persons):
 
         person_ids = [obj['id'] for obj in modified_persons]
@@ -90,6 +94,7 @@ class Extractor:
 
         return films
 
+    @backoff()
     def find_genre_film_connection(self, modified_genres):
 
         genre_ids = [obj['id'] for obj in modified_genres]
@@ -108,6 +113,7 @@ class Extractor:
 
         return films
 
+    @backoff()
     def enrich_modified_films(self, modified_films: list):
 
         films_ids = [obj['id'] for obj in modified_films]
