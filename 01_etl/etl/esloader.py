@@ -1,6 +1,7 @@
-from es_index import es_index_schema
+from typing import Iterator, List
+
 from elasticsearch import helpers
-from typing import List, Iterator
+from es_index import es_index_schema
 
 
 class ESLoader:

@@ -1,3 +1,4 @@
+import logging
 from typing import List
 
 from backoff import backoff
@@ -6,7 +7,8 @@ from utils import ornate_ids
 
 
 class Extractor:
-    """ Вытаскивает из Postgre записи по разным сущностям"""
+    """Вытаскивает из Postgre обновленные записи фильмов, людей, жанров, обогащает их
+    связанными данными"""
     def __init__(self, connection: _connection, state_manager):
         self.connection = connection
         self.state_manager = state_manager
@@ -15,9 +17,6 @@ class Extractor:
         curs = self.connection.cursor()
         curs.execute(query)
         return curs
-
-    def update_states(self, ids: str, table: str) -> None:
-        """Обновляет значения в states на текущую дату и время"""
 
     @backoff()
     def extract_data(self, batch_size=100):
@@ -38,8 +37,12 @@ class Extractor:
             genres = self.get_modified(table="genre", date=last_genre_check, batch_size=batch_size)
             films = self.find_genre_film_connection(genres)
 
-        full_data = self.enrich_modified_films(films)
+        if len(films) == 0:
+            logging.debug('В Postgre нет данных, которые следует отправить в Elastic')
+            return []
 
+        # Если актуальные фильмы существуют, то функция денормализует их
+        full_data = self.enrich_modified_films(films)
         return full_data
 
     def get_modified(self, table: str, date: str, batch_size: int) -> List[List]:
@@ -54,22 +57,24 @@ class Extractor:
 
         curs = self.execute_query(query)
         query_result = curs.fetchall()
+        logging.debug(f'Получено {len(query_result)} обновленных записей из Postgre')
 
-        if query_result:
-            # Изменяем дату состояния так, чтобы она соответствовала самой большому значению 'modified' из пачки
-            self.state_manager.set_state(key=f'last_{table}_check', value=str(query_result[-1][1]))
+        # Если данных в запросе нет, то возвращаем пустой лист
+        if len(query_result) == 0:
+            return []
 
-            # Получаем строку с id, находящимися в нашем курсоре
-            ids = ','.join(curs.mogrify('%s', (item['id'],)).decode()
-                           for item in query_result)
+        # Изменяем дату состояния так, чтобы она соответствовала самой большому значению 'modified' из пачки
+        self.state_manager.set_state(key=f'last_{table}_check', value=str(query_result[-1][1]))
 
-            # возвращаем пачку
-            return query_result
-        return []
+        # Получаем строку с id, находящимися в нашем курсоре
+        ids = ','.join(curs.mogrify('%s', (item['id'],)).decode() for item in query_result)
+
+        # возвращаем пачку DictRows
+        return query_result
 
     def find_person_film_connection(self, modified_persons):
 
-        person_ids = [obj[0] for obj in modified_persons]
+        person_ids = [obj['id'] for obj in modified_persons]
         id_string = ornate_ids(person_ids)
 
         query = f"""
@@ -87,7 +92,7 @@ class Extractor:
 
     def find_genre_film_connection(self, modified_genres):
 
-        genre_ids = [obj[0] for obj in modified_genres]
+        genre_ids = [obj['id'] for obj in modified_genres]
         id_string = ornate_ids(genre_ids)
 
         query = f"""
@@ -105,7 +110,7 @@ class Extractor:
 
     def enrich_modified_films(self, modified_films: list):
 
-        films_ids = [obj[0] for obj in modified_films]
+        films_ids = [obj['id'] for obj in modified_films]
         id_string = ornate_ids(films_ids)
 
         query = f"""

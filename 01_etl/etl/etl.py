@@ -3,12 +3,12 @@ import time
 
 import psycopg2
 from backoff import backoff
-from db_settings import PostgreSettings
 from elasticsearch import Elasticsearch, helpers
 from esloader import ESLoader
 from extractor import Extractor
 from psycopg2.extensions import connection as _connection
 from psycopg2.extras import DictCursor
+from settings import EsSettings, PostgreSettings
 from state import JsonFileStorage, State
 from transformer import Transformer
 
@@ -24,12 +24,12 @@ def create_pg_conn(settings: dict) -> _connection:
 
 
 @backoff()
-def create_es_connection(socket):
+def create_es_connection(address):
     """Создаст подключение к ES"""
-    connection = Elasticsearch(socket)
+    connection = Elasticsearch(address)
     logging.debug("Попытка подключения к ES")
     if not connection.ping() or connection is None:
-        connection = Elasticsearch(socket)
+        connection = Elasticsearch(address)
         logging.debug("Подключение к ES создано")
         return connection
     return connection
@@ -46,28 +46,29 @@ if __name__ == '__main__':
         # Подключаем класс, управляющий выгрузкой данных из Postgre
         extractor = Extractor(pg_conn, state)
 
-        # Подключаем класс, который будет преобразовывать данные из Postgre в подходящую для ES схему
+        # Инициализируем класс, который преобразует данные из Postgre в подходящую для ES схему
         transformer = Transformer()
 
-        # Подключаем класс, который управляет загрузкой данных в ElasticSearch
-        es_conn = create_es_connection("http://127.0.0.1:9200")
+        # Подключимся к нашему Elastic Search серверу
+        es_settings = EsSettings()
+        es_conn = create_es_connection(es_settings.get_full_address())
+
+        # Инициализируем класс, который управляет загрузкой данных в ElasticSearch
         loader = ESLoader(es_conn)
 
         # Проверяем наличие индекса и создаем его, если индекс отсутствует
+        print(es_conn)
         loader.delete_index('movies')
         loader.create_index('movies')
 
         while True:
             data = extractor.extract_data()
-            # Если скрипт не находит измененных данных, то мы ждем указанное количество времени и продолжаем поиск
 
-            if data is False:
+            # Если скрипт не находит измененных данных, то мы ожидаем указанное количество времени и возобновляем поиск
+            if data == []:
+                logging.debug(f"Актуальных данных нет, спим {WAIT_SEC} секунд")
                 time.sleep(WAIT_SEC)
-                logger.debug(f"Актуальных данных нет, спим {WAIT_SEC} секунд")
                 continue
 
             validated_data = transformer.transform_record(data)
-
             loader.bulk_upload(data=validated_data, index='movies', chunk_size=80)
-            time.sleep(5)
-

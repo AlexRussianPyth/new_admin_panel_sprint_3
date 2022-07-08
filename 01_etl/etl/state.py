@@ -60,9 +60,3 @@ class State:
         """Получить состояние по определённому ключу"""
         state = self.storage.retrieve_state(key)
         return state if state else None
-
-
-json_storage = JsonFileStorage('states.json')
-my_state = State(json_storage)
-
-json_storage.create_json_storage()

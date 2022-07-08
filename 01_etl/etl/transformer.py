@@ -1,9 +1,11 @@
+import logging
+
 from validation import EsFilmwork
 
 
 class Transformer:
-    """Преобразует данные из Postgre в подходящий для Elastic формат
-    Inputs: Batch of data
+    """Преобразует данные из Postgre в подходящий для Elastic формат.
+    Inputs: Batch of records from Postgre
     Outpur: Batch of docs in elasticsearch format
     """
     def transform_record(self, records: list) -> list[EsFilmwork]:
@@ -11,9 +13,10 @@ class Transformer:
         validated_records = []
 
         for record in records:
+
             actors = []
-            if record[8]:
-                for actor in record[8]:
+            if record['actors']:
+                for actor in record['actors']:
                     actor_id, actor_name = actor.strip(',').split('|')
                     actors.append({
                         'id': actor_id,
@@ -21,8 +24,8 @@ class Transformer:
                     })
 
             writers = []
-            if record[9]:
-                for writer in record[9]:
+            if record['writers']:
+                for writer in record['writers']:
                     writer_id, writer_name = writer.strip(',').split('|')
                     writers.append({
                         'id': writer_id,
@@ -30,18 +33,19 @@ class Transformer:
                     })
 
             record_dict = {
-                "id": record[0],
-                "imdb_rating": record[3],
-                "genre": record[4],
-                "title": record[1],
-                "description": record[2],
-                "director": record[5] if record[5] is not None else [],
-                "actors_names": record[6],
-                "writers_names": record[7],
+                "id": record['filmwork_id'],
+                "imdb_rating": record['rating'],
+                "genre": record['genre'],
+                "title": record['title'],
+                "description": record['description'],
+                "director": record['director'] if record['director'] is not None else [],
+                "actors_names": record['actors_names'],
+                "writers_names": record['writers_names'],
                 "actors": actors,
                 "writers": writers,
             }
 
             validated_records.append(EsFilmwork(**record_dict))
 
+        logging.debug("Возвращаем обработанную трансформером пачку данных для ES")
         return validated_records
