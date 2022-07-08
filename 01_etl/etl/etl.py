@@ -4,7 +4,7 @@ import time
 import psycopg2
 from backoff import backoff
 from db_settings import POSTGRE_SETTINGS
-from elasticsearch import Elasticsearch
+from elasticsearch import Elasticsearch, helpers
 from esloader import ESLoader
 from extractor import Extractor
 from psycopg2.extensions import connection as _connection
@@ -25,20 +25,23 @@ def create_pg_conn(settings: dict) -> _connection:
 
 @backoff()
 def create_es_connection(socket):
+    """Создаст подключение к ES"""
     connection = Elasticsearch(socket)
-    if connection.ping():
+    logging.debug("Попытка подключения к ES")
+    if not connection.ping() or connection is None:
+        connection = Elasticsearch(socket)
         logging.debug("Подключение к ES создано")
         return connection
+    return connection
 
 
 if __name__ == '__main__':
 
     with create_pg_conn(POSTGRE_SETTINGS) as pg_conn:
-        # Запускаем наш класс, управляющий записями о состояниях
+        # Запускаем класс, управляющий записями о состояниях
         json_storage = JsonFileStorage('states.json')
         json_storage.create_json_storage()
         state = State(json_storage)
-
 
         # Подключаем класс, управляющий выгрузкой данных из Postgre
         extractor = Extractor(pg_conn, state)
@@ -51,17 +54,19 @@ if __name__ == '__main__':
         loader = ESLoader(es_conn)
 
         # Проверяем наличие индекса и создаем его, если индекс отсутствует
+        loader.delete_index('movies')
         loader.create_index('movies')
 
         while True:
             data = extractor.extract_data()
-
             # Если скрипт не находит измененных данных, то мы ждем указанное количество времени и продолжаем поиск
+
             if data is False:
                 time.sleep(WAIT_SEC)
+                logger.debug(f"Актуальных данных нет, спим {WAIT_SEC} секунд")
                 continue
-            #
+
             validated_data = transformer.transform_record(data)
-            #
-            for obj in validated_data:
-                loader.store_or_update_doc(obj)
+
+            loader.bulk_upload(data=validated_data, index='movies', chunk_size=80)
+

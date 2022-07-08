@@ -1,4 +1,6 @@
 from es_index import es_index_schema
+from elasticsearch import helpers
+from typing import List, Iterator
 
 
 class ESLoader:
@@ -16,19 +18,27 @@ class ESLoader:
                 self._es.indices.create(index=index_name, ignore=400, body=index_settings)
             created = True
         except Exception as ex:
-            print("Ошибка с созданием индекса")
-            print(str(ex))
+            logging.debug("Ошибка в создании индекса")
+            logging.debug(str(ex))
         finally:
             return created
 
-    def store_or_update_doc(self, record, index_name="movies"):
-        """Проверит существование документа в индексе. Если документ существует, то обновит его. Если документа
-        нет, то создаст новый документ"""
-        try:
-            self._es.index(index=index_name, id=record.id, document=record.json())
-        except Exception as ex:
-            print('Ошибка добавления документа в индекс ES')
-            print(str(ex))
+    def bulk_upload(self, data: List, index: str, chunk_size: int) -> None:
+        """Загрузит данные из итератора в ES"""
+
+        def generate_data(objects) -> Iterator:
+            for obj in objects:
+                yield {
+                    "_id": obj.id,
+                    "_source": obj.dict()
+                }
+
+        helpers.bulk(
+            self._es,
+            actions=generate_data(data),
+            index=index,
+            chunk_size=chunk_size
+        )
 
     def delete_index(self, index_name):
         self._es.options(ignore_status=[400, 404]).indices.delete(index=index_name)
