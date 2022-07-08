@@ -36,7 +36,9 @@ if __name__ == '__main__':
     with create_pg_conn(POSTGRE_SETTINGS) as pg_conn:
         # Запускаем наш класс, управляющий записями о состояниях
         json_storage = JsonFileStorage('states.json')
+        json_storage.create_json_storage()
         state = State(json_storage)
+
 
         # Подключаем класс, управляющий выгрузкой данных из Postgre
         extractor = Extractor(pg_conn, state)
@@ -58,8 +60,8 @@ if __name__ == '__main__':
             if data is False:
                 time.sleep(WAIT_SEC)
                 continue
-
+            #
             validated_data = transformer.transform_record(data)
-
+            #
             for obj in validated_data:
                 loader.store_or_update_doc(obj)

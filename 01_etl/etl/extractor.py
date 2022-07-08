@@ -17,21 +17,12 @@ class Extractor:
         curs.execute(query)
         return curs
 
-    def update_modified_field(self, ids: str, table: str) -> None:
-        """Обновляет поля modified на текущую дату и время"""
-
-        sql = f"""
-                    UPDATE content.{table}
-                    SET modified = '{str(datetime.datetime.now())}'
-                    WHERE id IN ({ids});
-                """
-
-        self.execute_query(sql)
-        self.connection.commit()
+    def update_states(self, ids: str, table: str) -> None:
+        """Обновляет значения в states на текущую дату и время"""
 
     @backoff()
     def extract_data(self, batch_size=100):
-        """Выбирает сущность, которую не обновляли дольше всего, и запускает для нее метод обновления данных
+        """Проходит по всем данным в таблицах
         Returns: Список измененных фильмов со всеми связанными данными о людях и жанрах
         """
 
@@ -65,17 +56,17 @@ class Extractor:
         curs = self.execute_query(query)
         query_result = curs.fetchall()
 
-        # Так как пачка отсортирована, нам нужно получить самую старую дату из пачки и переставить наше состояние
-        self.state_manager.set_state(f"last_{table}_check", str(query_result[0][1]))
+        if query_result:
+            # Изменяем дату состояния так, чтобы она соответствовала самой большому значению 'modified' из пачки
+            self.state_manager.set_state(key=f'last_{table}_check', value=str(query_result[-1][1]))
 
-        # Получаем строку с id, находящимися в нашем курсоре
-        ids = ','.join(curs.mogrify('%s', (item['id'],)).decode()
-                       for item in query_result)
+            # Получаем строку с id, находящимися в нашем курсоре
+            ids = ','.join(curs.mogrify('%s', (item['id'],)).decode()
+                           for item in query_result)
 
-        # Обновляем поле modified для каждого объекта, который мы выгрузили из БД
-        self.update_modified_field(ids, table)
-
-        return query_result
+            # возвращаем пачку
+            return query_result
+        return []
 
     def find_person_film_connection(self, modified_persons):
 
